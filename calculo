@@ -27,9 +27,6 @@ spec:
       maxSurge: 25%
       maxUnavailable: 25%
     type: RollingUpdate
-  nodeSelectorTerms:
-    - matchExpressions:
-      - key: develop1
   template:
     metadata:
       annotations:
@@ -50,6 +47,8 @@ spec:
       labels:
         environment: Development-Homologacao
         paschoalotto-app: calculo-homol
+    parameters:
+      azuredevops_pool: develop1
     spec:
       containers:
       - envFrom:
