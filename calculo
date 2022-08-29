@@ -47,8 +47,7 @@ spec:
       labels:
         environment: Development-Homologacao
         paschoalotto-app: calculo-homol
-    parameters:
-      azuredevops_pool: develop1
+        azuredevops_pool: develop1
     spec:
       containers:
       - envFrom:
